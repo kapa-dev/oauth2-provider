@@ -6,7 +6,7 @@ const memory = {
       clientId: process.env.OAUTH_CLIENT_ID,
       clientSecret: process.env.OAUTH_CLIENT_SECRET,
       grants: ["authorization_code", "refresh_token", "password", "client_credentials"],
-      redirectUris: [process.env.OAUTH_REDIRECT_URI]
+      redirectUris: process.env.OAUTH_REDIRECT_URI.split(",")
     }
   },
 
